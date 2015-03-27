@@ -1,0 +1,18 @@
+<html>
+  <meta charset="utf-8" />
+  <body>
+    <p>パッケージ型アプリのインストールページ</p>
+    <script>
+      // ここの URL はフルの URL でなければなりません。
+      var manifestUrl = "http://notetau.githb.io/demo-ff-mosaic/manifest.webapp";
+      var req = navigator.mozApps.installPackage(manifestUrl);
+      req.onsuccess = function() {
+        alert(this.result.origin);
+      };
+      req.onerror = function() {
+        alert(this.error.name);
+      };
+    </script>
+  </body>
+</html>
+
