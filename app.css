@@ -1,0 +1,59 @@
+body {
+  background-color: #d7d7d7;
+  margin: 0px;
+  padding: 0px;
+}
+
+canvas {
+  padding: 0px;
+  margin: 0px;
+}
+
+h1{
+  position:relative;
+  margin:0 0 5px 0;
+  padding:0 0px 0px 55px;
+  font:bold 24px/40px sans-serif;
+  color:#333;
+  background:#f3f3f3;
+  z-index:1;
+}
+h1:before{
+  content:" ";
+  position:absolute;
+  top:0;
+  left:0;
+  width:40px;
+  height:40px;
+  background-image:  repeating-linear-gradient(to bottom, 
+    rgba( 75, 180,  19, 1.0), 
+    rgba( 75, 180,  19, 1.0) 5px, 
+    rgba(167, 195, 228, 1.0) 5px,
+    rgba(167, 195, 228, 1.0) 10px);
+}
+h1:after{
+  content:" ";
+  position:absolute;
+  top:0;
+  left:0;
+  width:40px;
+  height:40px;
+  background-image:  repeating-linear-gradient(to right, 
+    rgba(167, 195, 228, 0.5), 
+    rgba(167, 195, 228, 0.5) 5px, 
+    rgba( 75, 180,  19, 0.5) 5px,
+    rgba( 75, 180,  19, 0.5) 10px);
+}
+
+input[type=number] {
+  height:1.5em;
+}
+
+#action_button, #action_button2{
+  margin: 3px;
+}
+
+
+#setting_wrapper {
+  padding: 0px 5px 5px 5px;
+}

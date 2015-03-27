@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=320px,user-scalable=no">
+
+    <title>mosaic quiz</title>
+
+    <link rel="stylesheet" href="pure/buttons-min.css">
+    <link rel="stylesheet" href="app.css">
+  </head>
+  <body>
+    <h1>mosaic quiz</h1>
+
+    <div id="setting_wrapper" >
+      <div style="padding:1px">
+        <span>ファイル選択</span>
+        <button class="pure-button pure-button-primary" onclick="click_proxy('#select_file_input');">参照</button>
+      </div>
+      <div style="padding:1px">
+        <span>モザイクサイズ</span>
+        <input type="number" id="start_mosaic_size_input" max="9999" min="0">
+      </div>
+      <input type="file" accept=".jpg,.jpeg,png", id="select_file_input" onchange="load_file(this);" style="display:none;"><!-- proxy file selector -->
+    </div>
+
+    <div id="debug_message"></div>
+    <div id="message"></div>
+
+    <button id="action_button"  style="display:none;" class="pure-button pure-button-primary" onclick="click_button(this);">OK</button>
+    <button id="action_button2" style="display:none;" class="pure-button pure-button-secondary" onclick="alert('!?!?!?!?');">OK</button>
+
+    <div id="display">
+     <canvas id="mosaic_canvas" width=1 height=1></canvas>
+    </div>
+
+    <!-- Inline scripts are forbidden in Firefox OS apps (CSP restrictions),
+         so we use a script file. -->
+    <script src="app.js" defer></script>
+  </body>
+
+</html>
