@@ -4,7 +4,7 @@
     <p>パッケージ型アプリのインストールページ</p>
     <script>
       // ここの URL はフルの URL でなければなりません。
-      var manifestUrl = "http://notetau.githb.io/demo-ff-mosaic/manifest.webapp";
+      var manifestUrl = "http://notetau.github.io/demo-ff-mosaic/manifest.webapp";
       var req = navigator.mozApps.installPackage(manifestUrl);
       req.onsuccess = function() {
         alert(this.result.origin);
